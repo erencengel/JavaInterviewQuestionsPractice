@@ -2,7 +2,7 @@ package com.scalefocus;
 
 import java.util.Arrays;
 
-public class Anagram6 {
+public class Anagram_6 {
 
     public static void main(String[] args) {
         System.out.println(isAnagram("eren", "erne"));

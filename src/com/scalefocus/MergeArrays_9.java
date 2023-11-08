@@ -2,7 +2,7 @@ package com.scalefocus;
 
 import java.util.Arrays;
 
-public class MergeArrays9 {
+public class MergeArrays_9 {
 
     public static void main(String[] args) {
         System.out.println(Arrays.toString(mergeArrays(new Integer[]{1,3,0,-2000}, new Integer[]{-50,999})));

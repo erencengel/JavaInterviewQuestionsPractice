@@ -1,6 +1,6 @@
 package com.scalefocus;
 
-public class CheckPasswordStrong7 {
+public class CheckPasswordStrong_7 {
 
     public static void main(String[] args) {
 

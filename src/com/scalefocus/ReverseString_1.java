@@ -1,6 +1,6 @@
 package com.scalefocus;
 
-public class ReverseString1 {
+public class ReverseString_1 {
 
     public static void main(String[] args) {
         System.out.println(reverseString("eren"));

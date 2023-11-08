@@ -2,7 +2,7 @@ package com.scalefocus;
 
 import java.util.Locale;
 
-public class RemoveDuplicates3 {
+public class RemoveDuplicates_3 {
 
     public static void main(String[] args) {
         System.out.println(removeDuplicate("Aslıhan"));

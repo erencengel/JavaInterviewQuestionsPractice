@@ -1,8 +1,6 @@
 package com.scalefocus;
 
-import java.util.Arrays;
-
-public class FindMaxAndMin10 {
+public class FindMaxAndMin_10 {
 
     public static void main(String[] args) {
         System.out.println(findMin(new Integer[]{1,5,10,-20}));

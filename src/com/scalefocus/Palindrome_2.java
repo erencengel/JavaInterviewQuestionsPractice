@@ -1,8 +1,6 @@
 package com.scalefocus;
 
-import java.util.Locale;
-
-public class Palindrome2 {
+public class Palindrome_2 {
 
     public static void main(String[] args) {
         System.out.println(isPalindrome("eren"));

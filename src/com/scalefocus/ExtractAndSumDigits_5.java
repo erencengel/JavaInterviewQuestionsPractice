@@ -1,6 +1,6 @@
 package com.scalefocus;
 
-public class ExtractAndSumDigits5 {
+public class ExtractAndSumDigits_5 {
 
     public static void main(String[] args) {
         System.out.println("extractLettersAndSumDigits(\"123eren000!.8...*\") = " + extractLettersAndSumDigits("123eren000!.8...*"));

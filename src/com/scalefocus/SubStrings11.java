@@ -2,7 +2,7 @@ package com.scalefocus;
 
 import java.util.*;
 
-public class SubStrings {
+public class SubStrings11 {
 
     /*
     Count of substrings having all distinct characters
