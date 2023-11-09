@@ -27,8 +27,8 @@ public class Median_13 {
         int k = 3;
         int[] arr2 = {-1, 5, 13, 8, 2, 3, 3, 1};
         int l = 4;
-        List<Double> medians = separeteWindowWithSize(arr, k);
-        List<Double> medians2 = separeteWindowWithSize(arr2, l);
+        List<Double> medians = separateWindowWithSize(arr, k);
+        List<Double> medians2 = separateWindowWithSize(arr2, l);
         System.out.println(medians);
         System.out.println(medians2);
     }
@@ -77,7 +77,7 @@ public class Median_13 {
 
 
     //SOLVED BY ADAM
-    static List<Double> separeteWindowWithSize(int[] arr, int k) {
+    static List<Double> separateWindowWithSize(int[] arr, int k) {
 
         //  0  1  2
         //[-1, 5, 13]
