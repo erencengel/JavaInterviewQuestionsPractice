@@ -21,8 +21,16 @@ public class Median_13 {
     public static void main(String[] args) {
         giveMedian(new Integer[]{-1, 5, 13, 8, 2, 3, 3, 1}, 3);
         giveMedian(new Integer[]{-1, 5, 13, 8, 2, 3, 3, 1}, 4);
-        giveMedian(new Integer[]{-1, 5, 13, 8, 2, 3, 3, 1, 10, 20, 4, -2, 5}, 5);
-        giveMedian(new Integer[]{-1, 5, 13, 8, 2, 3, 3, 1, 9, 1, 0, -9, 20}, 6);
+        //giveMedian(new Integer[]{-1, 5, 13, 8, 2, 3, 3, 1, 10, 20, 4, -2, 5}, 5);
+        //giveMedian(new Integer[]{-1, 5, 13, 8, 2, 3, 3, 1, 9, 1, 0, -9, 20}, 6);
+        int[] arr = {-1, 5, 13, 8, 2, 3, 3, 1};
+        int k = 3;
+        int[] arr2 = {-1, 5, 13, 8, 2, 3, 3, 1};
+        int l = 4;
+        List<Double> medians = separeteWindowWithSize(arr, k);
+        List<Double> medians2 = separeteWindowWithSize(arr2, l);
+        System.out.println(medians);
+        System.out.println(medians2);
     }
 
     static void giveMedian(Integer[] arr, int k) {
@@ -65,5 +73,32 @@ public class Median_13 {
             k++;
         }
         return list2;
+    }
+
+
+    //SOLVED BY ADAM
+    static List<Double> separeteWindowWithSize(int[] arr, int k) {
+
+        //  0  1  2
+        //[-1, 5, 13]
+        List<Double> result = new ArrayList<>();
+
+        for (int i = 0; i <= arr.length - k; i++) {
+
+            int[] subArr = Arrays.copyOfRange(arr, i, i + k);
+            Arrays.sort(subArr);
+            System.out.println(Arrays.toString(subArr));
+
+            if (k % 2 != 0) {
+                result.add((double) subArr[k / 2]);
+            } else {
+
+                // -1 5 8 13 median=(5+8)/2 =6.5
+                result.add((double) (subArr[k / 2] + subArr[k / 2 - 1]) / 2);
+            }
+
+        }
+
+        return result;
     }
 }
