@@ -26,5 +26,4 @@ public class FindMaxAndMin_10 {
     //let's update the code
     //update again
     //one more update
-
 }
