@@ -1,5 +1,7 @@
 package com.scalefocus;
 
+import java.util.Arrays;
+
 public class FindMaxAndMin_10 {
 
     public static void main(String[] args) {
@@ -23,7 +25,14 @@ public class FindMaxAndMin_10 {
         return max;
     }
 
-    //let's update the code
-    //update again
-    //one more update
+    //another solution
+    public static int findMax1(int[] array){
+        Arrays.sort(array); // It will sort array in asc order
+        return  array[array.length - 1];
+    }
+
+    public static int findMin1(int[] array){
+        Arrays.sort(array); // ASC ORDER
+        return  array[0];
+    }
 }

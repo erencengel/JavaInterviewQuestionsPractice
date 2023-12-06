@@ -1,5 +1,6 @@
 package com.scalefocus;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -38,5 +39,63 @@ public class EraseCharsIfLessThanNTimes_18 {
         }
         return result;
     }
+
+    //another solution
+    private static String removeLetterByOccurence(String text,int occurence){
+        // Erase letter if less than N times
+
+
+        // Spaces will be replaced with single space if there consecutive
+        // 1 -> Remove extraSpaces
+        String baseText = removeExtraSpaces(text);
+        System.out.println("baseText = " + baseText);
+
+        // We need to create a Collection to put all textdata in Collection as Character type
+        // to see how many times we have inside the Collection
+        List<Character> textAsList=new ArrayList<>();
+        for (char eachChar : baseText.toCharArray()) {
+            textAsList.add(eachChar);
+        }
+
+        String result="";
+        for (int i = 0; i < baseText.length(); i++) {
+            char eachChar = baseText.charAt(i);
+
+            // if it is not a letter --> add this char as it is into String result
+            // Dont delete any numbers,punctuatin etc.
+            if(!Character.isLetter(eachChar)){
+                result+=eachChar;
+                continue;
+            }
+            // Erase letter if less than N times
+            if(Collections.frequency(textAsList,eachChar)<occurence){
+                continue;
+            }
+            result+=eachChar;
+        }
+
+        return result;
+    }
+
+        private static String removeExtraSpaces(String text){
+
+            String[] words = text.trim().split(" ");
+
+
+        /*
+        for (String word : words) {
+            System.out.println(word+" --- "+word.length());
+        }
+        */
+
+
+            String result="";
+            for (String word : words) {
+                if(!word.isEmpty()){
+                    result+=word+" ";
+                }
+            }
+            return result.trim();
+        }
 
 }
